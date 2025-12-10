@@ -21,6 +21,8 @@ Free usage of the software in this repository is provided, given that you cite o
 M. Bonici, G. D'Amico, J. Bel, C. Carbone, [_Effort.jl: a fast and differentiable emulator for the Effective Field Theory of the Large Scale Structure of the Universe_](https://arxiv.org/abs/2501.04639)
 
 The code has been used in the following publications:
+- A. Crespi, W. Percival, A. Krolewski, M. Bonici et al., (DESI Collaboration), [Baryon fraction from the BAO amplitude: a consistent approach to parameterizing perturbation growth](https://arxiv.org/abs/2511.23459)
+- A. Crespi, A. Krolewski, W. Percival, M. Bonici et al., (DESI Collaboration), [A measurement of H₀ from DESI DR1 using energy densities](https://arxiv.org/abs/2511.23432)
 - J. Morawetz, H. Zhang, M. Bonici, W. J. Percival, A. Crespi et al., (DESI Collaboration), [Frequentist Cosmological Constraints from Full-Shape Clustering Measurements in DESI DR1](https://arxiv.org/abs/2508.11811)
 - H. Zhang, M. Bonici, A. Rocher, W. J. Percival, A. de Mattia, et al., (DESI Collaboration), [Enhancing DESI DR1 Full-Shape analyses using HOD-informed priors](https://arxiv.org/abs/2504.10407)
 - H. Zhang, M. Bonici, G. D'Amico, S. Paradiso, W. J. Percival, [HOD-informed prior for EFT-based full-shape analyses of LSS](https://arxiv.org/abs/2409.12937)
