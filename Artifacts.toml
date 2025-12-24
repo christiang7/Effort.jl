@@ -4,3 +4,17 @@ git-tree-sha1 = "5ddcc617520efdc6710f0a9071a3dabfc73fda5b"
     [[PyBirdmnuw0wacdm.download]]
     sha256 = "ae7d488dc73c8614750df0000ac0e5f5ee52543cad9f056536c7825242debf83"
     url = "https://zenodo.org/records/17420922/files/trained_effort_pybird_mnuw0wacdm.tar.xz"
+
+[trained_effort_velocileptors_lpt_mnuw0wacdm]
+git-tree-sha1 = "0337cd8010dbb42f9e54c541564a66913b9eb548"
+
+    [[trained_effort_velocileptors_lpt_mnuw0wacdm.download]]
+    sha256 = "4f942141ecdfe8a71b03f514a47103fe9a5ae3e3c3b46963c7627b4e196ca579"
+    url = "https://zenodo.org/records/17635885/files/trained_effort_velocileptors_lpt_mnuw0wacdm.tar.xz"
+
+[trained_effort_velocileptors_rept_mnuw0wacdm]
+git-tree-sha1 = "6003873d8a8598b2d19cd5adb33eb475ad137327"
+
+    [[trained_effort_velocileptors_rept_mnuw0wacdm.download]]
+    sha256 = "e85ed469d894002cb70ab3fff150b54ee2aeff6a8b5b6d91e0b0812c24eda0f5"
+    url = "https://zenodo.org/records/18047315/files/trained_effort_velocileptors_rept_mnuw0wacdm.tar.gz"
