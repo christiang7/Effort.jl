@@ -16,5 +16,5 @@ git-tree-sha1 = "0337cd8010dbb42f9e54c541564a66913b9eb548"
 git-tree-sha1 = "6003873d8a8598b2d19cd5adb33eb475ad137327"
 
     [[trained_effort_velocileptors_rept_mnuw0wacdm.download]]
-    sha256 = "e85ed469d894002cb70ab3fff150b54ee2aeff6a8b5b6d91e0b0812c24eda0f5"
-    url = "https://zenodo.org/records/18047315/files/trained_effort_velocileptors_rept_mnuw0wacdm.tar.gz"
+    sha256 = "65e632b5457f2e1a6f2bbbaf6a157b56f7c4123583c72bdd816f7f595d454810"
+    url = "https://zenodo.org/records/18644527/files/trained_effort_velocileptors_rept_mnuw0wacdm.tar.xz"
