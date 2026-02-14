@@ -4,7 +4,7 @@ using Base: @kwdef
 # Load all dependencies needed for BackgroundCosmologyExt extension to activate
 using DataInterpolations, FastGaussQuadrature, Integrals, LinearAlgebra, OrdinaryDiffEqTsit5, SciMLSensitivity
 using AbstractCosmologicalEmulators
-using AbstractCosmologicalEmulators: get_emulator_description, akima_interpolation
+using AbstractCosmologicalEmulators: get_emulator_description, akima_interpolation, cubic_spline_interpolation
 using Artifacts
 using ChainRulesCore
 using FindFirstFunctions
@@ -36,12 +36,22 @@ function __init__()
     trained_emulators["PyBirdmnuw0wacdm"]["0"] = load_multipole_emulator(joinpath(artifact"PyBirdmnuw0wacdm", "0/"))
     trained_emulators["PyBirdmnuw0wacdm"]["2"] = load_multipole_emulator(joinpath(artifact"PyBirdmnuw0wacdm", "2/"))
     trained_emulators["PyBirdmnuw0wacdm"]["4"] = load_multipole_emulator(joinpath(artifact"PyBirdmnuw0wacdm", "4/"))
+
+    trained_emulators["VelocileptorsREPTmnuw0wacdm"] = Dict()
+    trained_emulators["VelocileptorsREPTmnuw0wacdm"]["0"] = load_multipole_emulator(joinpath(artifact"trained_effort_velocileptors_rept_mnuw0wacdm", "0/"))
+    trained_emulators["VelocileptorsREPTmnuw0wacdm"]["2"] = load_multipole_emulator(joinpath(artifact"trained_effort_velocileptors_rept_mnuw0wacdm", "2/"))
+    trained_emulators["VelocileptorsREPTmnuw0wacdm"]["4"] = load_multipole_emulator(joinpath(artifact"trained_effort_velocileptors_rept_mnuw0wacdm", "4/"))
+
+    trained_emulators["VelocileptorsLPTmnuw0wacdm"] = Dict()
+    trained_emulators["VelocileptorsLPTmnuw0wacdm"]["0"] = load_multipole_emulator(joinpath(artifact"trained_effort_velocileptors_lpt_mnuw0wacdm", "trained_effort_velocileptors_lpt_mnuw0wacdm/0/"))
+    trained_emulators["VelocileptorsLPTmnuw0wacdm"]["2"] = load_multipole_emulator(joinpath(artifact"trained_effort_velocileptors_lpt_mnuw0wacdm", "trained_effort_velocileptors_lpt_mnuw0wacdm/2/"))
+    trained_emulators["VelocileptorsLPTmnuw0wacdm"]["4"] = load_multipole_emulator(joinpath(artifact"trained_effort_velocileptors_lpt_mnuw0wacdm", "trained_effort_velocileptors_lpt_mnuw0wacdm/4/"))
 end
 
 include("neural_networks.jl")
 include("eft_commands.jl")
-include("projection.jl")
 include("utils.jl")
+include("projection.jl")
 include("chainrules.jl")
 
 # Export main user-facing functions

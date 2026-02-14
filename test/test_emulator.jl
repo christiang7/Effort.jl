@@ -398,4 +398,51 @@ using JSON
             end
         end
     end
+
+    @testset "Analytical vs AutoDiff Jacobian - Bias Parameters" begin
+        # Compare get_Pℓ_jacobian vs ForwardDiff through get_Pℓ
+        # This verifies the analytical Jacobian implementation against AD
+
+        @testset "Monopole (ℓ=0)" begin
+            # Analytical
+            P0, J0_analytical = Effort.get_Pℓ_jacobian(cosmology_params, D_growth, bias_params, monopole_emu)
+            
+            # AD
+            J0_autodiff = DifferentiationInterface.jacobian(
+                b -> Effort.get_Pℓ(cosmology_params, D_growth, b, monopole_emu),
+                AutoForwardDiff(),
+                bias_params
+            )
+            
+            @test J0_autodiff ≈ J0_analytical rtol=1e-5
+        end
+
+        @testset "Quadrupole (ℓ=2)" begin
+            # Analytical
+            P2, J2_analytical = Effort.get_Pℓ_jacobian(cosmology_params, D_growth, bias_params, quadrupole_emu)
+            
+            # AD
+            J2_autodiff = DifferentiationInterface.jacobian(
+                b -> Effort.get_Pℓ(cosmology_params, D_growth, b, quadrupole_emu),
+                AutoForwardDiff(),
+                bias_params
+            )
+            
+            @test J2_autodiff ≈ J2_analytical rtol=1e-5
+        end
+
+        @testset "Hexadecapole (ℓ=4)" begin
+            # Analytical
+            P4, J4_analytical = Effort.get_Pℓ_jacobian(cosmology_params, D_growth, bias_params, hexadecapole_emu)
+            
+            # AD
+            J4_autodiff = DifferentiationInterface.jacobian(
+                b -> Effort.get_Pℓ(cosmology_params, D_growth, b, hexadecapole_emu),
+                AutoForwardDiff(),
+                bias_params
+            )
+            
+            @test J4_autodiff ≈ J4_analytical rtol=1e-5
+        end
+    end
 end
